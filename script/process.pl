@@ -11,11 +11,11 @@ use Template;
 use JSON::XS;
 use FindBin;
 
-open my $fh, '<', "$FindBin::Bin/verses.json";
+open my $fh, '<', "$FindBin::Bin/../verses.json";
 
 my $data = decode_json(join '', <$fh>);
 
-my $tt = Template->new({ INCLUDE_PATH => $FindBin::Bin });
+my $tt = Template->new({ INCLUDE_PATH => "$FindBin::Bin/../tt" });
 
 my @weekdays = qw(
    Sunday

@@ -1,0 +1,38 @@
+[%- FOR page IN pages -%]
+[% IF page.0 %]
+Top Left Front
+
+[%
+   INCLUDE 'week.tt'
+   data = page.0
+-%]
+[% END %]
+
+[% IF page.1 %]
+Top Left Front
+
+[%
+   INCLUDE 'week.tt'
+   data = page.1
+-%]
+[% END %]
+
+[% IF page.2 %]
+Top Left Front
+
+[%
+   INCLUDE 'week.tt'
+   data = page.2
+-%]
+[% END %]
+
+[% IF page.3 %]
+Top Left Front
+
+[%
+   INCLUDE 'week.tt'
+   data = page.3
+-%]
+[% END %]
+
+[%- END %]

@@ -36,7 +36,10 @@ for my $day (@{$data->{days}}) {
 
    my $weekday = $weekdays[$i % @weekdays];
 
-   push @{$results[-1]}, "$weekday - $day";
+   push @{$results[-1]}, {
+      day => $weekday,
+      verse => $day,
+   };
 
    $i++;
 }

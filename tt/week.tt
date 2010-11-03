@@ -1,13 +1,7 @@
-[% data.0 %]
+[% FOREACH x = data %]
+\begin{alltt}[% x.day %]
 
-[% data.1 %]
 
-[% data.2 %]
+\end{alltt}& [% x.verse %]\\\hline
+[% END %]
 
-[% data.3 %]
-
-[% data.4 %]
-
-[% data.5 %]
-
-[% data.6 %]

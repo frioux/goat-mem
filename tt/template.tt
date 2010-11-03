@@ -1,38 +1,71 @@
-[%- FOR page IN pages -%]
-[% IF page.0 %]
-Top Left Front
+\documentclass[twocolumn]{article}
+\usepackage[margin=.25in, paperwidth=8.5in, paperheight=11in]{geometry}
+\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{alltt}
+%\usepackage{multicols}
+\setlength{\columnseprule}{1pt}
+\setlength{\columnsep}{.5in}
+%\oddsidemargin=-20pt
+%\topmargin=-20pt
+%\voffset=0pt
+%\hoffset0pt
 
+%opening
+\begin{document}
+[%- FOR page IN pages -%]
+\begin{table}[t] \footnotesize
+[% IF page.0 %]
+\begin{tabular}{p{.6in}|p{2.95in}}
+\hline
 [%
    INCLUDE 'week.tt'
    data = page.0
 -%]
+\hline
+\end{tabular}
+\end{table}
 [% END %]
 
 [% IF page.1 %]
-Top Left Front
-
+\begin{table}[b] \footnotesize
+\begin{tabular}{p{.65in}|p{2.90in}}
+\hline
 [%
    INCLUDE 'week.tt'
    data = page.1
 -%]
+\hline
+\end{tabular}
+\end{table}
 [% END %]
 
 [% IF page.2 %]
-Top Left Front
-
+\begin{table}[t] \footnotesize
+\begin{tabular}{p{.6in}|p{2.95in}}
+\hline
 [%
    INCLUDE 'week.tt'
    data = page.2
 -%]
+\hline
+\end{tabular}
+\end{table}
 [% END %]
 
 [% IF page.3 %]
-Top Left Front
-
+\begin{table}[b] \footnotesize
+\begin{tabular}{p{.65in}|p{2.90in}}
+\hline
 [%
    INCLUDE 'week.tt'
    data = page.3
 -%]
 [% END %]
-
+\hline
+\end{tabular}
+\end{table}
 [%- END %]
+
+\end{document}

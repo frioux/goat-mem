@@ -1,0 +1,9 @@
+README
+
+Goat Memorization Software:
+
+My first commit, not quite sure how this works, but here goes
+
+I made changes in every file, adjusted the templates a little here and there, and added romans chapters 1-4 to the data base
+
+Finally, I may have made perl cry but to get the formatting to work correctly I added some Latex commands into the variable declarations for the week days.  This allows me to manually set the height of each day without modifying any other chunk of code.  

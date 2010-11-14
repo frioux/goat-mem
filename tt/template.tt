@@ -4,44 +4,31 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{alltt}
-%\usepackage{multicols}
 \setlength{\columnseprule}{1pt}
 \setlength{\columnsep}{.5in}
-%\oddsidemargin=-20pt
-%\topmargin=-20pt
-%\voffset=0pt
-%\hoffset0pt
 
-%opening
 \begin{document}
-[%- FOR page IN pages -%]
+[%- FOR page IN pages -%] [% IF page.0 %]
 \begin{table}[t] \footnotesize
-[% IF page.0 %]
 \begin{tabular}{p{.6in}|p{2.95in}}
 \hline
 [%
    INCLUDE 'week.tt'
    data = page.0
 -%]
-\hline
 \end{tabular}
 \end{table}
-[% END %]
-
-[% IF page.1 %]
+[% END %] [% IF page.1 %]
 \begin{table}[b] \footnotesize
-\begin{tabular}{p{.65in}|p{2.90in}}
+\begin{tabular}{p{.6in}|p{2.95in}}
 \hline
 [%
    INCLUDE 'week.tt'
    data = page.1
 -%]
-\hline
 \end{tabular}
 \end{table}
-[% END %]
-
-[% IF page.2 %]
+[% END %] [% IF page.2 %]
 \begin{table}[t] \footnotesize
 \begin{tabular}{p{.6in}|p{2.95in}}
 \hline
@@ -49,23 +36,17 @@
    INCLUDE 'week.tt'
    data = page.2
 -%]
-\hline
 \end{tabular}
 \end{table}
-[% END %]
-
-[% IF page.3 %]
+[% END %] [% IF page.3 %]
 \begin{table}[b] \footnotesize
-\begin{tabular}{p{.65in}|p{2.90in}}
+\begin{tabular}{p{.6in}|p{2.95in}}
 \hline
 [%
    INCLUDE 'week.tt'
    data = page.3
 -%]
-[% END %]
-\hline
 \end{tabular}
 \end{table}
-[%- END %]
-
+[% END %]  [%- END %]
 \end{document}

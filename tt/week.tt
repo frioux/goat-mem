@@ -1,7 +1,5 @@
 [% FOREACH x = data %]
-\begin{alltt}[% x.day %]
-
-
-\end{alltt}& [% x.verse %]\\\hline
+ [% x.day %] &[% x.verse %] \\
+\hline
 [% END %]
 

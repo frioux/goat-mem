@@ -1,5 +1,10 @@
 README
 
+Commit III  14NOV2010
+Discovered a bug where Latex has a buffer overrun, fixed using a latex command that forces latex to place stuff before it gets to the end of the document, changed template to accomplish this
+
+Completed the database, all of romans is in the database.
+
 Goat Memorization Software:
 
 My first commit, not quite sure how this works, but here goes

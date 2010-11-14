@@ -4,6 +4,7 @@
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{alltt}
+\usepackage{placeins}
 \setlength{\columnseprule}{1pt}
 \setlength{\columnsep}{.5in}
 
@@ -48,5 +49,7 @@
 -%]
 \end{tabular}
 \end{table}
-[% END %]  [%- END %]
+[% END %] 
+\FloatBarrier
+[%- END %]
 \end{document}

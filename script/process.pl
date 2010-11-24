@@ -10,6 +10,8 @@ use Template;
 # libjson-xs-perl
 use JSON::XS;
 use FindBin;
+# liblist-moreutils-perl
+use List::MoreUtils 'natatime';
 
 open my $fh, '<', "$FindBin::Bin/../verses.json";
 
@@ -43,6 +45,20 @@ for my $day (@{$data->{days}}) {
 
    $i++;
 }
+
+my @new_results;
+my $iter = natatime 8, @results;
+
+while (my ($a, $b, $c, $d, $e, $f, $g, $h) = $iter->()) {
+   push @new_results,
+      $a, $c,
+      $e, $g,
+
+      $b, $d,
+      $f, $h
+}
+
+@results = @new_results;
 
 my @page;
 
